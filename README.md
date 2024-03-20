@@ -1,2 +1,2 @@
-# image_edge_detection
- perform edge detection on images using the Canny algorithm with OpenCV in Python
+# image processing
+ This repository houses scripts for various image processing tasks, offering a range of techniques Explore different approaches to manipulate and analyze images for diverse applications
