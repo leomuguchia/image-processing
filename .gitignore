@@ -1,7 +1,0 @@
-# Ignore the result file
-result.*
-
-# ignore sample images
-/sample_images
-
-gitignore
