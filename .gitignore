@@ -4,3 +4,6 @@ background/*
 
 # Ignore the result file
 result.*
+
+# ignore sample images
+sample images/
