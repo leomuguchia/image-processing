@@ -20,19 +20,19 @@ def overlay_images():
             print("Error: Failed to load background image from the specified path.")
             return
 
-        # Resize foreground to match background dimensions
-        foreground_resized = cv2.resize(foreground, (background.shape[1], background.shape[0]))
+        # Resize background to match foreground dimensions
+        background_resized = cv2.resize(background, (foreground.shape[1], foreground.shape[0]))
 
         # Extract alpha channel from foreground and normalize it
-        alpha_channel = foreground_resized[:,:,3] / 255.0
+        alpha_channel = foreground[:,:,3] / 255.0
 
         # Remove alpha channel from foreground
-        foreground_rgb = foreground_resized[:,:,:3]
+        foreground_rgb = foreground[:,:,:3]
 
         # Perform alpha blending manually
-        blended = np.zeros_like(background, dtype=np.float32)
+        blended = np.zeros_like(background_resized, dtype=np.float32)
         for c in range(3):
-            blended[:,:,c] = alpha_channel * foreground_rgb[:,:,c] + (1 - alpha_channel) * background[:,:,c]
+            blended[:,:,c] = alpha_channel * foreground_rgb[:,:,c] + (1 - alpha_channel) * background_resized[:,:,c]
 
         # Convert the blended image back to uint8
         blended = np.clip(blended, 0, 255).astype(np.uint8)

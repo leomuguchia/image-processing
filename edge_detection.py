@@ -11,7 +11,7 @@ def detect_edges(image, low_threshold=30, high_threshold=150, blur_kernel_size=(
 
 def main():
     # Load foreground image
-    foreground_path = 'foreground.png'
+    foreground_path = 'sample_images/input.jpg'
     foreground = cv2.imread(foreground_path)
 
     # Detect edges of the foreground object
