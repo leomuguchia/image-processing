@@ -1,0 +1,6 @@
+# Ignore any image files provided in the foreground and background paths
+foreground/*
+background/*
+
+# Ignore the result file
+result.*
