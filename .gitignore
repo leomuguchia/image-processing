@@ -3,5 +3,7 @@ result.*
 
 # ignore sample images
 /sample_images
+/results
+/images
 
 gitignore
