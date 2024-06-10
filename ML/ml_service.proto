@@ -1,0 +1,20 @@
+// This file defines a service MLService with a single RPC method Predict, 
+// which takes a PredictRequest message and returns a PredictResponse message. 
+// The PredictRequest contains an image as a byte array, and the PredictResponse 
+// contains an integer prediction
+
+syntax = "proto3";
+
+package mlservice;
+
+service MLService {
+    rpc Predict (PredictRequest) returns (PredictResponse) {}
+}
+
+message PredictRequest {
+    bytes image = 1;
+}
+
+message PredictResponse {
+    int32 prediction = 1;
+}

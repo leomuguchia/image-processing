@@ -52,6 +52,9 @@ def overlay_images(background, foreground_adjusted):
         print(f"Error in overlaying images: {str(e)}")
 
 def main():
+    # foreground should have no bg
+    # yet to implement bg removal so use remove.bg online
+    # background is a background image
     foreground_path = "sample_images/woman.png"
     background_path = "sample_images/clearbg.jpeg"
     foreground = cv2.imread(foreground_path, cv2.IMREAD_UNCHANGED)

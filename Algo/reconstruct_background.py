@@ -7,7 +7,7 @@ def overlay_images():
     output_path = 'result.jpg' 
     
     try:
-        foreground = cv2.imread(foreground_path, cv2.IMREAD_UNCHANGED)  # Load with alpha channel
+        foreground = cv2.imread(foreground_path, cv2.IMREAD_UNCHANGED) 
         background = cv2.imread(background_path)
 
         if foreground is None:
